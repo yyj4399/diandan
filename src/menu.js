@@ -6,8 +6,8 @@ export default class Menu extends React.Component {
     super(props);
     this.state = {
       tabs: [
-        {title: "超值优惠"},
-        {title: "新品上架"},
+        { title: "超值优惠" },
+        { title: "新品上架" },
       ],
     }
   }
@@ -15,19 +15,14 @@ export default class Menu extends React.Component {
     // 左侧菜单栏
     return (
       <div className="Menu">
-        <ul>
-          {this.tab()}
-        </ul>
-      </div>
-    );
-  }
-  tab() {
-    return (
-      <ul>
-        {this.state.tabs.map((tab) => {
-        return <li>{tab.title}</li>;
+        {this.state.tabs.map((tab, index) => {
+          return (
+            <div className="tab" key={index}>
+              <span>{tab.title}</span>
+            </div>
+          );
         })}
-      </ul>
+      </div>
     );
   }
 }

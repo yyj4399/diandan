@@ -1,0 +1,11 @@
+@media screen and (max-width:800px) {
+  .Menu {
+    width: 30vw;
+    text-align: center;
+  }
+  .Menu .tab {
+    line-height: 10vh;
+    border-style: solid;
+    border-width: 1px;
+  }
+}
