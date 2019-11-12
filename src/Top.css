@@ -1,0 +1,17 @@
+@media screen and (max-width:800px) {
+  .Top .jiantou p{
+    width: 0;
+    height: 0;
+    border: 1em solid;
+    border-color: transparent black transparent transparent;
+    position: relative;
+  }
+  /* .Top .jiantou i::after{
+      content: '';
+      position: absolute;
+      top: -55px;
+      left: -50px;
+      border: 50px solid;
+      border-color: transparent transparent transparent transparent;
+  } */
+}

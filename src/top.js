@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Top.css";
 
 export default class Top extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ export default class Top extends React.Component {
     // top search tab
     return (
       <div className="Top">
-        <canvas onClick={() => this.setState({ temp: '' })} width="200" height="100"></canvas>
+        <canvas className="jiantou" onClick={()=>{}}></canvas>
       </div>
     );
   }
