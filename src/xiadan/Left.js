@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Menu.css";
 
-export default class Menu extends React.Component {
+export default class Left extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -1,22 +1,14 @@
 import React from 'react';
 import './App.css';
-import Menu from './menu';
-import Top from './top';
+import Order from './xiadan/order';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: {},
-    }
+    this.state = {};
   }
   render() {
-    return (
-      <div className="App">
-        <Top />
-        <Menu />
-      </div>
-    );
+    return <Order />;
   }
 }
 
