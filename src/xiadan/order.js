@@ -8,10 +8,12 @@ export default class Order extends React.Component {
   }
   render() {
     return (
-      <div className="Top">
-        <img src="/left.png" alt="图片加载失败..." onClick={() => { }} />
-        <span>点菜</span>
-        <span>座位</span>
+      <div className="Body">
+        <div className="Top">
+          <img src="/left.png" alt="返回" onClick={() => { }} />
+          <span>左左烧烤</span>
+          <span>座位</span>
+        </div>
       </div>
     );
   }
