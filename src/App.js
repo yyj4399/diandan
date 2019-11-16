@@ -13,7 +13,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">哎。。。</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
