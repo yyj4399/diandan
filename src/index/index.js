@@ -1,4 +1,5 @@
 import React from 'react';
+import Menu from '../common/Menu';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ export default class Index extends React.Component {
           <span>左左烧烤</span>
           <span>座位</span>
         </div>
+        <Menu />
       </div>
     );
   }
