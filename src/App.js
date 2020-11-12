@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Index from "./index/Index";
+import Index from "./index/Indexx";
 import Order from "./index/Order";
 
 export default function App() {
