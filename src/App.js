@@ -6,10 +6,22 @@ import {
   Link
 } from "react-router-dom";
 import Index from "./index/Index";
-import Order from "./xiadan/order";
+import Order from "./index/Order";
 
 export default function App() {
   return (
-    <Index />
+    <Router>
+      {/* <Link to="/">Home</Link> */}
+      {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/">
+          <Index />
+        </Route>
+        <Route path="order">
+          <Order />
+        </Route>
+      </Switch>
+    </Router>
   );
 }

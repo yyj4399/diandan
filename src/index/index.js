@@ -8,7 +8,7 @@ export default class Index extends React.Component {
   }
   render() {
     return (
-      <div className="Body">
+      <div className="mainx">
         <div className="Top">
           <img src="/left.png" alt="返回" onClick={() => { }} />
           <span>左左烧烤</span>
