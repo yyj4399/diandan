@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../common/Menu';
 
-export default class Order extends React.Component {
+export default class Bill extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};

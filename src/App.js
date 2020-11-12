@@ -5,22 +5,17 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Index from "./index/Indexx";
+import Index from "./index/Home";
 import Order from "./index/Order";
+import Bill from "./index/Bill";
 
 export default function App() {
   return (
     <Router>
-      {/* <Link to="/">Home</Link> */}
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/">
-          <Index />
-        </Route>
-        <Route path="order">
-          <Order />
-        </Route>
+            <Route exact path="/" component={Index}/>
+            <Route exact path="/order" component={Order}/>
+            <Route exact path="/bill" component={Bill}/>
       </Switch>
     </Router>
   );
