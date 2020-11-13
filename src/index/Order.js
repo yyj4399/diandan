@@ -14,23 +14,23 @@ export default class Order extends React.Component {
     this.List1 = this.List.map((item, index) => {
       if (now === index) {
         return (
-          <div key={index} onClick={this.handleList2.bind(this, index)} className="item active">
+          <div key={index} onClick={this.handleList1.bind(this, index)} className="item active">
             <span>{item.name}</span>
           </div>
         );
       } else {
         return (
-          <div key={index} onClick={this.handleList2.bind(this, index)} className="item">
+          <div key={index} onClick={this.handleList1.bind(this, index)} className="item">
             <span>{item.name}</span>
           </div>
         );
       }
     });
   }
-  handleList2(index) {
+  handleList2(now) {
     // 右菜单
-    this.handleList1(index);
-    this.List2 = this.List[index].data.map((item, index) => {
+    this.handleList1(now);
+    this.List2 = this.List[now].data.map((item, index) => {
       if (this.state.list_1 === index) {
         return (
           <div key={index} className="item active">
