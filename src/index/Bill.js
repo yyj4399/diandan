@@ -8,7 +8,11 @@ export default class Bill extends React.Component {
   }
   render() {
     return (
-      <div className="main">
+      <div className="app">
+        <div className="main">
+          <div className="a1"></div>
+          <div className="a2"></div>
+        </div>
         <Menu />
       </div>
     );

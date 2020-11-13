@@ -10,9 +10,9 @@ export default class Menu extends React.Component {
   render() {
     return (
       <div className="menu">
-        <Link className="a1" to="/" >首页</Link>
-        <Link className="a1" to="/order" >点单</Link>
-        <Link className="a1" to="/bill" >账单</Link>
+        <Link className="item" to="/" >首页</Link>
+        <Link className="item" to="/order" >点单</Link>
+        <Link className="item" to="/bill" >账单</Link>
       </div>
     );
   }
