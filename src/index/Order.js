@@ -3,62 +3,61 @@ import Menu from '../common/Menu';
 import "./Order.css";
 
 export default class Order extends React.Component {
-  List = [{ id: 1, name: '热销', data: [{ id: 11, name: '糖醋排骨' }] }, { id: 2, name: '热销', data: [{ id: 11, name: '糖醋排骨' }] }];
   constructor(props) {
     super(props);
-    console.log(this.state);
-    this.handleList1(0);
+    this.state = {
+      list: [
+        {
+          id: 1, name: '热销', data: [
+            { id: 11, name: '糖醋排骨' },
+            { id: 12, name: '可乐鸡翅' },
+          ]
+        },
+        {
+          id: 2, name: '热销', data: [
+            { id: 11, name: '鲍鱼鸡翅' }
+          ]
+        }
+      ],
+      list1_index: 0
+    };
   }
-  handleList1(now) {
-    // 左菜单
-    this.List1 = this.List.map((item, index) => {
-      if (now === index) {
-        return (
-          <div key={index} onClick={this.handleList1.bind(this, index)} className="item active">
-            <span>{item.name}</span>
-          </div>
-        );
-      } else {
-        return (
-          <div key={index} onClick={this.handleList1.bind(this, index)} className="item">
-            <span>{item.name}</span>
-          </div>
-        );
-      }
-    });
-  }
-  handleList2(now) {
-    // 右菜单
-    this.handleList1(now);
-    this.List2 = this.List[now].data.map((item, index) => {
-      if (this.state.list_1 === index) {
-        return (
-          <div key={index} className="item active">
-            <span>{item.name}</span>
-          </div>
-        );
-      } else {
-        return (
-          <div key={index} className="item">
-            <span>{item.name}</span>
-          </div>
-        );
-      }
-    });
-  }
+  // 渲染
   render() {
     return (
       <div className="app">
         <div className="main">
           <div className="a1">
-            {this.List1}
+            <this.renderList1 list={this.state.list} now={this.state.list1_index} click={(now) => { this.handleList1(now) }} />
           </div>
           <div className="a2">
-            {this.List1}
+            <this.renderList2 list={this.state.list} now={this.state.list1_index} click={(now) => { this.handleList2(now) }} />
           </div>
         </div>
         <Menu />
       </div>
     );
+  }
+  // 左菜单
+  renderList1(props) {
+    return props.list.map((item, index) =>
+      <div key={index} onClick={() => { props.click(index) }} className={`item ${props.now === index ? 'active' : ''}`}>
+        <span>{item.name}</span>
+      </div>
+    );
+  }
+  handleList1(now) {
+    this.setState({ list1_index: now });
+  }
+  // 右菜单
+  renderList2(props) {
+    return props.list[props.now].data.map((item, index) =>
+      <div key={index} className="item active">
+        <span>{item.name}</span>
+      </div>
+    );
+  }
+  handleList2(now) {
+    this.setState({ list1_index: now });
   }
 }
