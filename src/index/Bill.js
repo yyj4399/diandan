@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../common/Menu';
+import Nav from '../common/Nav';
 
 export default class Bill extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export default class Bill extends React.Component {
           <div className="a1"></div>
           <div className="a2"></div>
         </div>
-        <Menu />
+        <Nav />
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./Menu.css";
+import "./Nav.css";
 
-export default class Menu extends React.Component {
+export default class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};

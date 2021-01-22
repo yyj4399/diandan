@@ -34,3 +34,10 @@
   display: block;
   flex: 4;
 }
+.app>.main>.a2>.item {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 10vw;
+  flex: 4;
+}
